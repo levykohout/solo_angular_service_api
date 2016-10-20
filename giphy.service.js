@@ -11,7 +11,7 @@ function GiphyAPIService($http){
 
         return $http.get(API + 'random?' + key).then(function(response){
 
-           
+
            return response.data.data;
            console.log(response.data.data);
 
@@ -24,9 +24,9 @@ function GiphyAPIService($http){
     	this.q = q.replace(' ','+');
 
         return $http.get(API +'search?q=' + this.q +'&' + key).then(function(response){
-           
+
             return response.data.data;
-           
+
 
         });
 

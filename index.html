@@ -32,15 +32,19 @@
 
         </div>
         <div class="row">
-        <div class="firstpic"><img class="img-thumbnail" ng-src="{{main.random}}" alt="random gifs" /></div>
+            <div class="col-md-4"></div>
 
-
-        <ul rn-carousel ng-repeat="gif in main.searchresults">
-            <li class="list-unstyled">
-                <img class="img-thumbnail" ng-src="{{gif.images.downsized.url}}" />
-            </li>
-        </ul>
-    </div>
+            <div class="firstpic col-md-4"><img ng-src="{{main.random}}" /></div>
+            <div class="col-md-4 clearfix"></div>
+        </div>
+        <div class="row clearfix">
+            <ul class="list-unstyled" ng-repeat="gif in main.searchresults">
+                <li class="list-inline-item pull-left col-md-2">
+                    <img class="img-responsive searched-image pull-left" ng-src="{{gif.images.downsized.url}}" />
+                </li>
+            </ul>
+        </div>
+    
     </main>
 
 </body>

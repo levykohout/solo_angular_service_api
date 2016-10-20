@@ -14,19 +14,24 @@ function MainController (giphy){
     main.searchresults=[];
 
 
-    giphy.getGifsData(main.search).then(function(gif){
-
-         main.random = gif.image_original_url;
-
-    });
+    main.getGifsData =function(){
 
 
-    
+        giphy.getGifsData(main.search).then(function(gif){
+
+            main.random = gif.image_original_url;
+
+        });
+
+    };
+
+
+
 
 
 
     main.getSearchData =function(){
-         
+
 
         giphy.getSearchData(main.search).then(function(gifs){
          main.searchresults = gifs;
