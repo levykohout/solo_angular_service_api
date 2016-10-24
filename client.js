@@ -14,12 +14,14 @@ function MainController (giphy){
     main.searchresults=[];
 
 
+
     main.getGifsData =function(){
 
 
         giphy.getGifsData(main.search).then(function(gif){
 
             main.random = gif.image_original_url;
+
 
         });
 
@@ -35,6 +37,7 @@ function MainController (giphy){
 
         giphy.getSearchData(main.search).then(function(gifs){
          main.searchresults = gifs;
+    
         });
 
     };
